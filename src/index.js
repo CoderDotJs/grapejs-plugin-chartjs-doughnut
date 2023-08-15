@@ -145,7 +145,7 @@ export default grapesjs.plugins.add("gjs-charts", (editor, opts = {}) => {
     }
   };
   const config = {
-    chartType: "gjs-charts-bar",
+    chartType: "gjs-charts-doughnut",
     chartScript: script,
     chartBlockName: "Doughnut Chart",
     ...opts,
