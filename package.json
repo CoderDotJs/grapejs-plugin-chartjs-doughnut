@@ -1,6 +1,6 @@
 {
   "name": "grapesjs-plugin-chartjs-doughnut",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Chart.js editor for GrapesJs",
   "main": "dist/grapesjs-plugin-chartjs-doughnut.min.js",
   "scripts": {
