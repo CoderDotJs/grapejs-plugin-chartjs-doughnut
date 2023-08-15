@@ -122,24 +122,23 @@ export default grapesjs.plugins.add("gjs-charts", (editor, opts = {}) => {
             type: "doughnut",
             data: data,
             options: options,
-            plugins: [ChartDataLabels],
           });
       };
 
       if (typeof someExtLib == "undefined") {
-        const dataLabels = document.createElement("script");
-        dataLabels.setAttribute("type", "text/javascript");
-        dataLabels.src =
-          "https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.2.0";
-        dataLabels.onload = () => {
-          const script = document.createElement("script");
-          script.onload = initLib;
-          script.setAttribute("type", "text/javascript");
-          script.src =
-            "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js";
-          document.body.appendChild(script);
-        };
-        document.body.appendChild(dataLabels);
+        // const dataLabels = document.createElement("script");
+        // dataLabels.setAttribute("type", "text/javascript");
+        // dataLabels.src =
+        //   "https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.2.0";
+        // dataLabels.onload = () => {
+        const script = document.createElement("script");
+        script.onload = initLib;
+        script.setAttribute("type", "text/javascript");
+        script.src =
+          "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js";
+        document.body.appendChild(script);
+        // };
+        // document.body.appendChild(dataLabels);
       } else {
         initLib();
       }
